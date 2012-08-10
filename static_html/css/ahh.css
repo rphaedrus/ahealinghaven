@@ -1,13 +1,15 @@
 html { }
 
 body {
+	position:relative;
 	background: #ffde7d;
+	font-size:14px;
 	/* background: #fef5be; /* Old browsers */
 }
 
 #bkgA {
 	position: absolute;
-	z-index:2;
+	z-index:20;
 	top:0px;
 	left:0px;
 	width: 100%;
@@ -22,65 +24,195 @@ body {
 	background: -o-linear-gradient(left,  #f2b600 0%,#ffd454 20%,#fff0c2 42%,#fff0c2 47%,#ffd454 85%,#f2b600 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(left,  #f2b600 0%,#ffd454 20%,#fff0c2 42%,#fff0c2 47%,#ffd454 85%,#f2b600 100%); /* IE10+ */
 	background: linear-gradient(to right,  #f2b600 0%,#ffd454 20%,#fff0c2 42%,#fff0c2 47%,#ffd454 85%,#f2b600 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2b600', endColorstr='#f2b600',GradientType=1 ); /* IE6-8 */
+}
+html.lt-ie9 #bkgA {
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2b600', endColorstr='#f2b600',GradientType=1 ); /* IE6-8 */	
 }
 #bkgB {
 	position: absolute;
-	z-index:1;
+	z-index:10;
 	top: 16px;
 	left: 0px;
 	width: 100%;
-	height: 717px;
+/*	height: 717px; */
 	/* gradients generated at http://www.colorzilla.com/gradient-editor/ */
 	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
 	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmFkZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZWY1YmUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-	background: -moz-linear-gradient(top,  #fffadf 0%, #fef5be 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fffadf), color-stop(100%,#fef5be)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #fffadf 0%,#fef5be 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #fffadf 0%,#fef5be 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #fffadf 0%,#fef5be 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #fffadf 0%,#fef5be 100%); /* W3C */
+	background: -moz-linear-gradient(top,  #fffadf 0%, #fef5be 717px); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fffadf), color-stop(717px,#fef5be)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fffadf 0%,#fef5be 717px); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fffadf 0%,#fef5be 717px); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fffadf 0%,#fef5be 717px); /* IE10+ */
+	background: linear-gradient(to bottom,  #fffadf 0%,#fef5be 717px); /* W3C */
+}
+html.lt-ie9 #bkgB {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffadf', endColorstr='#fef5be',GradientType=0 ); /* IE6-8 */
-
-}
-<!--[if gte IE 9]>
-  <style type="text/css">
-    .gradient {
-       filter: none;
-    }
-  </style>
-<![endif]-->
-
-div[role="main"] {
-	z-index:10;
-	color: #f00;
 }
 
+/* div#canvas {
+	position:relative;
+	z-index:30;
+}
+*/
 header {
+	position:relative;
+	margin:0 auto;
+	padding-top:34px;
+	width:1000px;
+	z-index:100;
+}
+/*
+	image replacement based on improved nash method here:
+	http://nicolasgallagher.com/css-image-replacement-with-pseudo-elements/
+*/
+header h1 {
+	text-align:center;
+	font-family:Zapfino, cursive, sans-serif;
+	font-size:26px;
+	line-height:22px;
+	color:#939757;
+	overflow:visible;
+}
+header h1:first-line { line-height:86px; }
+header h1.nir {
+   height:104px; /* height of replacement image */
+   width:244px; /* width of replacement image */
+   margin-top:0;
+   margin-left:370px;
+   padding:0;
+   overflow:hidden;
+}
+header h1.nir:before {
+   content:url(../img/logoAhh.png);
+   display:inline-block;
+   font-size:0;
+   line-height:0;
+}
+html.lt-ie8 header h1.nir {
+   height:100px;
+   padding:0;
+   margin:0;
+   overflow:hidden;
+   text-indent:-9000px;
+   background:url(../img/logoAhh.png) no-repeat 0 0;
+}
+header h2 {
+	color:#676fa0;
+	font-size:0.93em;
+	font-style:italic;
+	font-weight:100;
+	font-family:Georgia, serif;
+	text-align:center;
+	margin-top:-5px;
+}
+footer {
+	margin:1em auto;
+	width:1000px;
+}
+nav a, nav a:link, nav a:visited {
+  position:relative;
+  color:#f07037;
+  text-transform:uppercase;
+  font-weight:100;
+  margin:0;
+  padding:0em;
+  text-align:right;
+  text-decoration:none;
+}
+nav a:hover, nav a:active {
+	text-decoration:underline;
+	color:#939757;
+}
+nav a:active {
+	text-decoration:underline;
+	color:#784242;
+}
+nav a:hover:after, nav a:active:after {
+	text-decoration:none;
+}
+header nav {
+	position:absolute;
+	top:92px;
+}
+header nav a:nth-child(3) {
+	margin-right: 268px;
+}
+header nav a, header nav a:link,
+header nav a:visited, header nav a:hover, header nav a:active {
+	padding:19px 0em 19px 1.7em;
+    border-top:1px solid #cdccb2;
+    border-bottom:1px solid #cdccb2;
+}
+header .flair01 {
+	position:absolute;
+	display:block;
+	top:64px;
+	left:210px;
+	width:39px;
+	height:10px;
+	background:url(../img/flair01.png) no-repeat;
+}
+header .flair02 {
+	position:absolute;
+	display:block;
+	top:129px;
+	left:223px;
+	width:134px;
+	height:45px;
+	background:url(../img/flair02.png) no-repeat;
+}
+header .flair03 {
+	position:absolute;
+	display:block;
+	top:29px;
+	left:623px;
+	width:148px;
+	height:110px;
+	background:url(../img/flair03.png) no-repeat;
+}
+header nav a:after {
+  color:#ccb;
+  content: "\2022";
+  margin-left:1.7em;
+}
+header nav a:last-child:after, header nav a:nth-child(3):after {
+  padding-right:0.5em;
+  content:"";
+}
+header nav a:first-child, header nav a:nth-child(4) {
+	padding-left:2.2em;
+}
+section[role="main"] {
 	position:relative;
 	margin:1em auto;
 	width:1000px;
 }
+article h3 {
+	color: #784242;
+	font-style:italic;
+	font-weight:100;
+	font-family:Georgia, serif;
+	letter-spacing:1px;
+	font-size:1.5em;
+}
+nav[role="services"] h2:nth-child(1) {
+	position:relative;
+	display:inline-block;
+	left:-137px;
+	top:-70px;
+	width:637px;
+	height:367px;
+	background-image:url('../img/bkgMassageButton.png');
+}
+
+/* 
+div[role="main"] {
+	z-index:10;
+	color: #f00;
+}
 nav {
 	position:absolute;
 	top:3.9em;
-}
-nav a, nav a:link, nav a:visited {
-  color: #f07037;
-  text-transform: uppercase;
-  font-size:0.9em;
-  margin: 0 0 0 1.3em;
-  padding: 0;
-  text-align:right;
-  text-decoration: none;
-}
-nav a:after {
-  color:#ccb;
-  content: "\2022";
-  margin-left: 1.3em;
-}
-nav a:last-child:after {
-  content:"";
 }
 #navA {
 	left:1.6em;
@@ -88,8 +220,4 @@ nav a:last-child:after {
 #navB {
 	right:1.6em;
 }
-section[role="main"] {
-	margin:1em auto;
-	width:1000px;
-}
-
+*/

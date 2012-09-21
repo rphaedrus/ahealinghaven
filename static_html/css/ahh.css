@@ -192,10 +192,23 @@ header nav li:last-child:after, header nav li:nth-child(3):after {
 header nav li:first-child, header nav li:nth-child(4) {
 	padding-left:31px;
 }
+div.bkgHome {
+	position:absolute;
+	display:block;
+	z-index:60;
+	top:129px;
+	width:100%;
+	min-width:1000px;
+	height:475px;
+	background-image:url('../img/bkgbnr_home.jpg');
+	background-position:center top;
+	background-repeat:no-repeat;
+}
 section[role="main"] {
 	position:relative;
 	margin:1em auto;
 	width:1000px;
+	z-index:200;
 }
 article h3 {
 	color: #784242;
@@ -205,42 +218,34 @@ article h3 {
 	letter-spacing:1px;
 	font-size:1.5em;
 }
-nav[role="services"] h2:nth-child(1) {
-	position:absolute;
-	top:-78px;
-	left:-137px;
-	width:637px;
-	height:395px;
-	background-image:url('../img/bkgbnr_massage.jpg');
-}
-nav[role="services"] h2:nth-child(2) {
-	position:absolute;
-	top:-78px;
-	left:500px;
-	width:649px;
-	height:463px;
-	background-image:url('../img/bkgbnr_herbalism2.jpg');
+nav[role="services"] h2 {
+	position:relative;
+	float:left;
+	width:500px;
+	height:280px;
 }
 /*
 	image replacement based on improved nash method here:
 	http://nicolasgallagher.com/css-image-replacement-with-pseudo-elements/
 */
-nav[role="services"] h2:nth-child(1) a {
+nav[role="services"] h2 a {
 	position:relative;
 	display:block;
 	text-align:center;
-	font-family:Zapfino, cursive, sans-serif;
+	font-family: cursive, sans-serif;
 	text-transform:lowercase;
 	text-decoration:none;
 	font-size:35px;
-	line-height:35px;
-	color:#f07037;
-	top:102px;
-	left:220px;
 	overflow:visible;
 }
+nav[role="services"] h2:nth-child(1) a {
+	color:#f07037;
+	top:32px;
+	left:85px;
+	line-height:105px;
+}
 nav[role="services"] h2:nth-child(1) a:first-line {
-	line-height:86px;
+	line-height:20px;
 	font-size:70px;
 	color:#784242;
 }
@@ -250,15 +255,15 @@ nav[role="services"] h2:nth-child(1) a.nir {
    height:151px; /* height of replacement image */
    width:322px; /* width of replacement image */
    margin-top:0;
-   margin-left:0px;
+   margin-left:0;
    padding:0;
    overflow:hidden;
 }
 nav[role="services"] h2:nth-child(1) a.nir:before {
-   content:url(../img/btn_massage.png);
-   display:inline-block;
-   font-size:0;
-   line-height:0;
+	content:url(../img/btn_massage.png);
+	display:inline-block;
+	font-size:0;
+	line-height:0;
 }
 html.lt-ie8 nav[role="services"] h2:nth-child(1) a.nir {
    height:151px;
@@ -269,22 +274,14 @@ html.lt-ie8 nav[role="services"] h2:nth-child(1) a.nir {
    background:url(../img/btn_massage.png) no-repeat 0 0;
 }
 nav[role="services"] h2:nth-child(2) a {
-	position:relative;
-	display:block;
-	text-align:center;
-	font-family:Zapfino, cursive, sans-serif;
-	text-transform:lowercase;
-	text-decoration:none;
-	font-size:35px;
-	line-height:35px;
 	color:#939858;
-	top:63px;
-	left:94px;
-	overflow:visible;
+	top:-17px;
+	left:96px;
+	line-height:0px;
 }
 nav[role="services"] h2:nth-child(2) a:first-line {
-	line-height:200px;
-	font-size:60px;
+	line-height:120px;
+	font-size:70px;
 	color:#5b611b;
 }
 nav[role="services"] h2:nth-child(2) a:hover { color:#5b611b; }
@@ -293,7 +290,7 @@ nav[role="services"] h2:nth-child(2) a.nir {
    height:178px; /* height of replacement image */
    width:333px; /* width of replacement image */
    margin-top:0;
-   margin-left:0px;
+   margin-left:0;
    padding:0;
    overflow:hidden;
 }
@@ -311,6 +308,29 @@ html.lt-ie8 nav[role="services"] h2:nth-child(2) a.nir {
    text-indent:-9000px;
    background:url(../img/btn_herbalism.png) no-repeat 0 0;
 }
+
+
+section article,
+section aside {
+	position:relative;
+	float:left;
+	width:309px;
+}
+section article:nth-child(1),
+section aside:nth-child(1) {
+	margin-right:30px;
+}
+section article:nth-child(2) {
+	margin-right:36px;
+}
+
+
+footer {
+	clear: both;
+}
+
+
+
 
 /* 
 div[role="main"] {

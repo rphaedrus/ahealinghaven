@@ -105,10 +105,6 @@ header h2 {
 	text-align:center;
 	margin-top:-5px;
 }
-footer {
-	margin:1em auto;
-	width:1000px;
-}
 nav a, nav a:link, nav a:visited {
   position:relative;
   color:#f07037;
@@ -192,31 +188,11 @@ header nav li:last-child:after, header nav li:nth-child(3):after {
 header nav li:first-child, header nav li:nth-child(4) {
 	padding-left:31px;
 }
-div.bkgHome {
-	position:absolute;
-	display:block;
-	z-index:60;
-	top:129px;
-	width:100%;
-	min-width:1000px;
-	height:475px;
-	background-image:url('../img/bkgbnr_home.jpg');
-	background-position:center top;
-	background-repeat:no-repeat;
-}
 section[role="main"] {
 	position:relative;
 	margin:1em auto;
 	width:1000px;
 	z-index:200;
-}
-article h3 {
-	color: #784242;
-	font-style:italic;
-	font-weight:100;
-	font-family:Georgia, serif;
-	letter-spacing:1px;
-	font-size:1.5em;
 }
 nav[role="services"] h2 {
 	position:relative;
@@ -308,24 +284,9 @@ html.lt-ie8 nav[role="services"] h2:nth-child(2) a.nir {
    text-indent:-9000px;
    background:url(../img/btn_herbalism.png) no-repeat 0 0;
 }
-
-
-section article,
-section aside {
-	position:relative;
-	float:left;
-	width:309px;
-}
-section article:nth-child(1),
-section aside:nth-child(1) {
-	margin-right:30px;
-}
-section article:nth-child(2) {
-	margin-right:36px;
-}
-
-
 footer {
+	margin:1em auto;
+	width:1000px;
 	clear: both;
 }
 

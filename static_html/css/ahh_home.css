@@ -2,7 +2,7 @@ div.bkgHome {
 	position:absolute;
 	display:block;
 	z-index:60;
-	top:129px;
+	top:110px;
 	width:100%;
 	min-width:1000px;
 	height:475px;
@@ -13,14 +13,105 @@ div.bkgHome {
 section {
 	clear:both;
 }
-section:nth-child(3) {
-	border-top:1px #d0cfb3 solid;
+section[role="main"] section:nth-child(3) {
+	border-top:1px #d0cfb3 solid; 
+}
+nav[role="services"] h2 {
+	position:relative;
+	float:left;
+	width:500px;
+	height:235px;
+}
+/*
+	image replacement based on improved nash method here:
+	http://nicolasgallagher.com/css-image-replacement-with-pseudo-elements/
+*/
+nav[role="services"] h2 a {
+	position:relative;
+	display:block;
+	text-align:center;
+	font-family: cursive, sans-serif;
+	text-transform:lowercase;
+	text-decoration:none;
+	font-size:35px;
+	overflow:visible;
+}
+nav[role="services"] h2:nth-child(1) a {
+	color:#f07037;
+	top:32px;
+	left:85px;
+	line-height:105px;
+}
+nav[role="services"] h2:nth-child(1) a:first-line {
+	line-height:20px;
+	font-size:70px;
+	color:#784242;
+}
+nav[role="services"] h2:nth-child(1) a:hover { color:#784242; }
+nav[role="services"] h2:nth-child(1) a:hover:first-line { color:#f07037; }
+nav[role="services"] h2:nth-child(1) a.nir {
+   height:151px; /* height of replacement image */
+   width:322px; /* width of replacement image */
+   margin-top:0;
+   margin-left:0;
+   padding:0;
+   overflow:hidden;
+}
+nav[role="services"] h2:nth-child(1) a.nir:before {
+	content:url(../img/btn_massage.png);
+	display:inline-block;
+	font-size:0;
+	line-height:0;
+}
+html.lt-ie8 nav[role="services"] h2:nth-child(1) a.nir {
+   height:151px;
+   padding:0;
+   margin:0;
+   overflow:hidden;
+   text-indent:-9000px;
+   background:url(../img/btn_massage.png) no-repeat 0 0;
+}
+nav[role="services"] h2:nth-child(2) a {
+	color:#939858;
+	top:-17px;
+	left:96px;
+	line-height:0px;
+}
+nav[role="services"] h2:nth-child(2) a:first-line {
+	line-height:120px;
+	font-size:70px;
+	color:#5b611b;
+}
+nav[role="services"] h2:nth-child(2) a:hover { color:#5b611b; }
+nav[role="services"] h2:nth-child(2) a:hover:first-line { color:#939858; }
+nav[role="services"] h2:nth-child(2) a.nir {
+   height:178px; /* height of replacement image */
+   width:333px; /* width of replacement image */
+   margin-top:0;
+   margin-left:0;
+   padding:0;
+   overflow:hidden;
+}
+nav[role="services"] h2:nth-child(2) a.nir:before {
+   content:url(../img/btn_herbalism.png);
+   display:inline-block;
+   font-size:0;
+   line-height:0;
+}
+html.lt-ie8 nav[role="services"] h2:nth-child(2) a.nir {
+   height:178px;
+   padding:0;
+   margin:0;
+   overflow:hidden;
+   text-indent:-9000px;
+   background:url(../img/btn_herbalism.png) no-repeat 0 0;
 }
 section[role="featured_articles"] article h3 {
 	color:#939757;
 	font-weight:normal;
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	margin-bottom:0;
+	padding-top:110px;
 }
 article h4 {
 	color: #784242;
@@ -33,6 +124,18 @@ article h4 {
 section[role="featured_articles"] article h4 {
 	font-style:italic;
 	border-bottom:1px #d0cfb3 solid;
+}
+article[role="featured_article"] h3 {
+	background-image:url(../img/img_featuredArticle.jpg);
+	background-repeat:no-repeat;
+}
+article[role="stress_relief"] h3 {
+	background-image:url(../img/img_featuredStressRelief.jpg);
+	background-repeat:no-repeat;
+}
+article[role="featured_herb"] h3 {
+	background-image:url(../img/img_featuredHerb.jpg);
+	background-repeat:no-repeat;
 }
 section article:nth-child(1),
 section aside:nth-child(1) {
@@ -48,6 +151,8 @@ section aside {
 	color:#666;
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	width:309px;
+	margin-top:2em;
+	margin-bottom:2em;
 }
 section aside blockquote {
 	margin:0px;
@@ -63,6 +168,16 @@ section aside blockquote:before {
 	line-height:1em;
 	margin-left:30%;
 	margin-bottom:-0.5em;
-	font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+	font-family: Georgia, TimesNewRoman, "Times New Roman", Times, Baskerville, serif;
 	content:"\201C";
+}
+.vcard span {
+	line-height:1.7em;
+}
+.vcard .organization-name {
+	display:block;
+	font-weight:bold;
+}
+.vcard .street-address, .vcard .extended-address {
+	display:block;
 }

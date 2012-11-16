@@ -49,15 +49,9 @@ html.lt-ie9 #bkgB {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffadf', endColorstr='#fef5be',GradientType=0 ); /* IE6-8 */
 }
 
-/* div#canvas {
-	position:relative;
-	z-index:30;
-}
-*/
 header {
 	position:relative;
 	margin:0 auto;
-	padding-top:34px;
 	width:1000px;
 	z-index:100;
 }
@@ -65,7 +59,16 @@ header {
 	image replacement based on improved nash method here:
 	http://nicolasgallagher.com/css-image-replacement-with-pseudo-elements/
 */
-header h1 {
+header hgroup, footer hgroup {
+	position:relative;
+	text-align:center;
+	width:244px;
+}
+header hgroup, footer hgroup {
+	margin-left: auto;
+	margin-right: auto;
+}
+header hgroup h1, footer hgroup h1 {
 	text-align:center;
 	font-family:Zapfino, cursive, sans-serif;
 	font-size:26px;
@@ -73,22 +76,20 @@ header h1 {
 	color:#939757;
 	overflow:visible;
 }
-header h1:first-line { line-height:86px; }
-header h1.nir {
+header hgroup h1:first-line, footer hgroup h1:first-line { line-height:86px; }
+header hgroup h1.nir, footer hgroup h1.nir {
    height:104px; /* height of replacement image */
    width:244px; /* width of replacement image */
-   margin-top:0;
-   margin-left:370px;
    padding:0;
    overflow:hidden;
 }
-header h1.nir:before {
+header hgroup h1.nir:before, footer hgroup h1.nir:before {
    content:url(../img/logoAhh.png);
    display:inline-block;
    font-size:0;
    line-height:0;
 }
-html.lt-ie8 header h1.nir {
+html.lt-ie8 header hgroup h1.nir, html.lt-ie8 footer hgroup h1.nir {
    height:104px;
    padding:0;
    margin:0;
@@ -96,7 +97,7 @@ html.lt-ie8 header h1.nir {
    text-indent:-9000px;
    background:url(../img/logoAhh.png) no-repeat 0 0;
 }
-header h2 {
+header hgroup h2, footer hgroup h2 {
 	color:#676fa0;
 	font-size:0.93em;
 	font-style:italic;
@@ -128,10 +129,10 @@ nav a:hover:after, nav a:active:after {
 }
 header nav {
 	position:absolute;
-	top:92px;
+	top:58px;
 	z-index:110;
 }
-header nav li {
+header nav li, footer nav li {
 	list-style:none;
 	display:inline;
 	padding:19px 0em 19px 0em;
@@ -140,52 +141,52 @@ header nav li {
     border-bottom:1px solid #cdccb2;
 }
 header nav li:nth-child(3) {
-	margin-right: 267px;
+/*	margin-right: 267px;*/
+	margin-right: 280px;
 }
-header nav a, header nav a:link,
-header nav a:visited, header nav a:hover, header nav a:active {
-}
-header .flair01 {
+.flair01 {
 	position:absolute;
 	display:block;
 	z-index:90;
-	top:64px;
+	top:30px;
 	left:210px;
 	width:39px;
 	height:10px;
 	background:url(../img/flair01.png) no-repeat;
 }
-header .flair02 {
+.flair02 {
 	position:absolute;
 	display:block;
 	z-index:91;
-	top:129px;
+	top:95px;
 	left:223px;
 	width:134px;
 	height:45px;
 	background:url(../img/flair02.png) no-repeat;
 }
-header .flair03 {
+.flair03 {
 	position:absolute;
 	display:block;
 	z-index:92;
-	top:29px;
-	left:623px;
+	top:-5px;
+	left:636px;
 	width:148px;
 	height:110px;
 	background:url(../img/flair03.png) no-repeat;
 }
-header nav li:after {
+header nav li:after, footer nav li:after {
   color:#ccb;
   content:"\2022";
   margin-left:24px;
   margin-right:24px;
 }
-header nav li:last-child:after, header nav li:nth-child(3):after {
+header nav li:last-child:after, footer nav li:last-child:after,
+header nav li:nth-child(3):after {
   content:"";
   margin-right:7px;
 }
-header nav li:first-child, header nav li:nth-child(4) {
+header nav li:first-child, footer nav li:first-child, 
+header nav li:nth-child(4) {
 	padding-left:31px;
 }
 section[role="main"] {
@@ -194,103 +195,39 @@ section[role="main"] {
 	width:1000px;
 	z-index:200;
 }
-nav[role="services"] h2 {
-	position:relative;
-	float:left;
-	width:500px;
-	height:280px;
-}
-/*
-	image replacement based on improved nash method here:
-	http://nicolasgallagher.com/css-image-replacement-with-pseudo-elements/
-*/
-nav[role="services"] h2 a {
-	position:relative;
-	display:block;
-	text-align:center;
-	font-family: cursive, sans-serif;
-	text-transform:lowercase;
-	text-decoration:none;
-	font-size:35px;
-	overflow:visible;
-}
-nav[role="services"] h2:nth-child(1) a {
-	color:#f07037;
-	top:32px;
-	left:85px;
-	line-height:105px;
-}
-nav[role="services"] h2:nth-child(1) a:first-line {
-	line-height:20px;
-	font-size:70px;
-	color:#784242;
-}
-nav[role="services"] h2:nth-child(1) a:hover { color:#784242; }
-nav[role="services"] h2:nth-child(1) a:hover:first-line { color:#f07037; }
-nav[role="services"] h2:nth-child(1) a.nir {
-   height:151px; /* height of replacement image */
-   width:322px; /* width of replacement image */
-   margin-top:0;
-   margin-left:0;
-   padding:0;
-   overflow:hidden;
-}
-nav[role="services"] h2:nth-child(1) a.nir:before {
-	content:url(../img/btn_massage.png);
-	display:inline-block;
-	font-size:0;
-	line-height:0;
-}
-html.lt-ie8 nav[role="services"] h2:nth-child(1) a.nir {
-   height:151px;
-   padding:0;
-   margin:0;
-   overflow:hidden;
-   text-indent:-9000px;
-   background:url(../img/btn_massage.png) no-repeat 0 0;
-}
-nav[role="services"] h2:nth-child(2) a {
-	color:#939858;
-	top:-17px;
-	left:96px;
-	line-height:0px;
-}
-nav[role="services"] h2:nth-child(2) a:first-line {
-	line-height:120px;
-	font-size:70px;
-	color:#5b611b;
-}
-nav[role="services"] h2:nth-child(2) a:hover { color:#5b611b; }
-nav[role="services"] h2:nth-child(2) a:hover:first-line { color:#939858; }
-nav[role="services"] h2:nth-child(2) a.nir {
-   height:178px; /* height of replacement image */
-   width:333px; /* width of replacement image */
-   margin-top:0;
-   margin-left:0;
-   padding:0;
-   overflow:hidden;
-}
-nav[role="services"] h2:nth-child(2) a.nir:before {
-   content:url(../img/btn_herbalism.png);
-   display:inline-block;
-   font-size:0;
-   line-height:0;
-}
-html.lt-ie8 nav[role="services"] h2:nth-child(2) a.nir {
-   height:178px;
-   padding:0;
-   margin:0;
-   overflow:hidden;
-   text-indent:-9000px;
-   background:url(../img/btn_herbalism.png) no-repeat 0 0;
-}
 footer {
+	position:relative;
 	margin:1em auto;
 	width:1000px;
 	clear: both;
 }
-
-
+footer hgroup {
+	float: left;
+}
+footer nav {
+	position:relative;
+	top:70px;
+	left:30px;
+}
+footer .flair01 {
+	top:42px;
+	left:468px;
+}
+footer .flair02 {
+	top:108px;
+	left:468px;
+}
+footer .flair03 {
+	top:6px;
+	left:622px;
+}
+footer p[role="copyright"] {
+	position:relative;
+	clear:both;
+	text-align:right;
+	color:#666;
+	font-size:0.8em;
+}
 
 
 /* 

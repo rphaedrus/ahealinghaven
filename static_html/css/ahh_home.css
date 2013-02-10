@@ -31,26 +31,29 @@ nav[role="services"] h2 a {
 	display:block;
 	text-align:center;
 	font-family: cursive, sans-serif;
+	font-size:70px;
 	text-transform:lowercase;
 	text-decoration:none;
-	font-size:35px;
 	overflow:visible;
 }
-nav[role="services"] h2:nth-child(1) a {
-	color:#f07037;
-	top:32px;
-	left:85px;
-	line-height:105px;
+nav[role="services"] h2 span {
+	position:absolute;
+	display:block;
+	text-align:center;
+	font-family: Georgia, Times, "Times New Roman", serif;
+	font-style: italic;
+	font-size:0.9em;
+	top:0px;
+	left:0px;
 }
-nav[role="services"] h2:nth-child(1) a:first-line {
-	line-height:20px;
-	font-size:70px;
+nav[role="services"] h2:nth-child(1) a {
+	top:-21px;
+	left:85px;
 	color:#784242;
 }
-nav[role="services"] h2:nth-child(1) a:hover { color:#784242; }
-nav[role="services"] h2:nth-child(1) a:hover:first-line { color:#f07037; }
+nav[role="services"] h2:nth-child(1) a:hover { color:#f07037; }
 nav[role="services"] h2:nth-child(1) a.nir {
-   height:151px; /* height of replacement image */
+   height:204px; /* height of replacement image */
    width:322px; /* width of replacement image */
    margin-top:0;
    margin-left:0;
@@ -71,19 +74,14 @@ html.lt-ie8 nav[role="services"] h2:nth-child(1) a.nir {
    text-indent:-9000px;
    background:url(../img/btn_massage.png) no-repeat 0 0;
 }
-nav[role="services"] h2:nth-child(2) a {
-	color:#939858;
-	top:-17px;
-	left:96px;
-	line-height:0px;
+nav[role="services"] h2:nth-child(1) span {	
 }
-nav[role="services"] h2:nth-child(2) a:first-line {
-	line-height:120px;
-	font-size:70px;
+nav[role="services"] h2:nth-child(2) a {
+	top:-21px;
+	left:100px;
 	color:#5b611b;
 }
-nav[role="services"] h2:nth-child(2) a:hover { color:#5b611b; }
-nav[role="services"] h2:nth-child(2) a:hover:first-line { color:#939858; }
+nav[role="services"] h2:nth-child(2) a:hover { color:#939858; }
 nav[role="services"] h2:nth-child(2) a.nir {
    height:178px; /* height of replacement image */
    width:333px; /* width of replacement image */
@@ -99,7 +97,7 @@ nav[role="services"] h2:nth-child(2) a.nir:before {
    line-height:0;
 }
 html.lt-ie8 nav[role="services"] h2:nth-child(2) a.nir {
-   height:178px;
+   height:121px;
    padding:0;
    margin:0;
    overflow:hidden;

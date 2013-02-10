@@ -10,22 +10,31 @@ div.bkgHome {
 	background-position:center top;
 	background-repeat:no-repeat;
 }
+div.bkgFlair {
+	position:absolute;
+	display:block;
+	z-index:50;
+	height:436px;
+	width:459px;
+	left:-195px;
+	margin-top:10px;
+	background-image:url('../img/bkg_home_flair.png');
+	background-repeat:no-repeat;
+}
 section {
 	clear:both;
 }
 section[role="main"] section:nth-child(3) {
 	border-top:1px #d0cfb3 solid; 
 }
+
+/* main banner images for massage and herbalism */
 nav[role="services"] h2 {
 	position:relative;
 	float:left;
 	width:500px;
 	height:235px;
 }
-/*
-	image replacement based on improved nash method here:
-	http://nicolasgallagher.com/css-image-replacement-with-pseudo-elements/
-*/
 nav[role="services"] h2 a {
 	position:relative;
 	display:block;
@@ -34,75 +43,88 @@ nav[role="services"] h2 a {
 	font-size:70px;
 	text-transform:lowercase;
 	text-decoration:none;
-	overflow:visible;
 }
 nav[role="services"] h2 span {
 	position:absolute;
-	display:block;
+	pointer-events:none;
 	text-align:center;
 	font-family: Georgia, Times, "Times New Roman", serif;
 	font-style: italic;
-	font-size:0.9em;
-	top:0px;
-	left:0px;
+	font-size:0.3em;
+	top:132px;
+	left:51px;
 }
 nav[role="services"] h2:nth-child(1) a {
 	top:-21px;
 	left:85px;
 	color:#784242;
 }
-nav[role="services"] h2:nth-child(1) a:hover { color:#f07037; }
-nav[role="services"] h2:nth-child(1) a.nir {
-   height:204px; /* height of replacement image */
-   width:322px; /* width of replacement image */
-   margin-top:0;
-   margin-left:0;
-   padding:0;
-   overflow:hidden;
-}
-nav[role="services"] h2:nth-child(1) a.nir:before {
-	content:url(../img/btn_massage.png);
-	display:inline-block;
-	font-size:0;
-	line-height:0;
-}
-html.lt-ie8 nav[role="services"] h2:nth-child(1) a.nir {
-   height:151px;
-   padding:0;
-   margin:0;
-   overflow:hidden;
-   text-indent:-9000px;
-   background:url(../img/btn_massage.png) no-repeat 0 0;
-}
-nav[role="services"] h2:nth-child(1) span {	
-}
 nav[role="services"] h2:nth-child(2) a {
 	top:-21px;
 	left:100px;
 	color:#5b611b;
 }
+nav[role="services"] h2:nth-child(2) span {
+	top:128px;
+	left:68px;
+}
+nav[role="services"] h2:nth-child(1) a:hover { color:#f07037; }
 nav[role="services"] h2:nth-child(2) a:hover { color:#939858; }
+nav[role="services"] h2:nth-child(1) a:hover span { color:#000; }
+nav[role="services"] h2:nth-child(2) a:hover span { color:#000; }
+
+/*
+	image replacement based on improved nash method here:
+	http://nicolasgallagher.com/css-image-replacement-with-pseudo-elements/
+*/
+nav[role="services"] h2:nth-child(1) a.nir {
+   height:204px; /* height of replacement image */
+   width:322px; /* width of replacement image */
+}
+nav[role="services"] h2:nth-child(1) a.nir:before {
+	content:url(../img/btn_massage.png);
+}
+html.lt-ie8 nav[role="services"] h2:nth-child(1) a.nir {
+   background:url(../img/btn_massage.png) no-repeat 0 0;
+}
+
+nav[role="services"] h2:nth-child(1) span.nir {
+   height:36px; /* height of replacement image */
+   width:196px; /* width of replacement image */
+}
+nav[role="services"] h2:nth-child(1) span.nir:before {
+	content:url(../img/btn_viewMassageServices.png);
+}
+html.lt-ie8 nav[role="services"] h2:nth-child(1) span.nir {
+	background:url(../img/btn_viewMassageServices.png) no-repeat 0 0;
+}
+nav[role="services"] h2:nth-child(1):hover span.nir:before {
+	margin-top:-36px;
+}
+
 nav[role="services"] h2:nth-child(2) a.nir {
-   height:178px; /* height of replacement image */
-   width:333px; /* width of replacement image */
-   margin-top:0;
-   margin-left:0;
-   padding:0;
-   overflow:hidden;
+	height:178px; /* height of replacement image */
+	width:333px; /* width of replacement image */
 }
 nav[role="services"] h2:nth-child(2) a.nir:before {
    content:url(../img/btn_herbalism.png);
-   display:inline-block;
-   font-size:0;
-   line-height:0;
 }
 html.lt-ie8 nav[role="services"] h2:nth-child(2) a.nir {
-   height:121px;
-   padding:0;
-   margin:0;
-   overflow:hidden;
-   text-indent:-9000px;
    background:url(../img/btn_herbalism.png) no-repeat 0 0;
+}
+
+nav[role="services"] h2:nth-child(2) span.nir {
+   height:36px; /* height of replacement image */
+   width:196px; /* width of replacement image */
+}
+nav[role="services"] h2:nth-child(2) span.nir:before {
+	content:url(../img/btn_viewHerbalismServices.png);
+}
+html.lt-ie8 nav[role="services"] h2:nth-child(2) span.nir {
+   background:url(../img/btn_viewHerbalismServices.png) no-repeat 0 0;
+}
+nav[role="services"] h2:nth-child(2):hover span.nir:before {
+	margin-top:-36px;
 }
 
 section[role="featured_articles"] article h3 {
@@ -152,26 +174,48 @@ section aside {
 	width:309px;
 	margin-top:2em;
 	margin-bottom:2em;
+	z-index:200;
 }
 
-#readMore_special {
-	background-image: url(/img/btn_readMore_orange.png);
-	width: 168px;
-	height: 31px;
+section[role="featured_articles"] p[role="button"] {
+	display:inline-block;
 }
-#readMore_stress {
-	background-image: url(/img/btn_readMore_blue.png);
-	width: 168px;
-	height: 31px;
+section[role="featured_articles"] p[role="button"] a.nir {
+	display:block;
+	height:31px; /* height of replacement image */
+	width:168px; /* width of replacement image */
+	font-size:0.7em;
 }
-#readMore_herb {
-	background-image: url(/img/btn_readMore_green.png);
-	width: 168px;
-	height: 31px;
+article[role="featured_article"] p[role="button"] a.nir:before {
+	content:url(../img/btn_readMore_orange.png);
 }
-#readMore_special:hover, #readMore_stress:hover, #readMore_herb:hover {
-	background-position: center bottom;
+html.lt-ie8 article[role="featured_article"] p[role="button"] a.nir {
+   background:url(../img/btn_readMore_orange.png) no-repeat 0 0;
 }
+article[role="featured_article"] p[role="button"]:hover a.nir:before {
+	margin-top:-31px;
+}
+
+article[role="stress_relief"] p[role="button"] a.nir:before {
+	content:url(../img/btn_readMore_blue.png);
+}
+html.lt-ie8 article[role="stress_relief"] p[role="button"] a.nir {
+   background:url(../img/btn_readMore_blue.png) no-repeat 0 0;
+}
+article[role="stress_relief"] p[role="button"]:hover a.nir:before {
+	margin-top:-31px;
+}
+
+article[role="featured_herb"] p[role="button"] a.nir:before {
+	content:url(../img/btn_readMore_green.png);
+}
+html.lt-ie8 article[role="featured_herb"] p[role="button"] a.nir {
+   background:url(../img/btn_readMore_green.png) no-repeat 0 0;
+}
+article[role="featured_herb"] p[role="button"]:hover a.nir:before {
+	margin-top:-31px;
+}
+
 section aside blockquote {
 	margin:0px;
 	color:#797fac;

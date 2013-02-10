@@ -7,6 +7,26 @@ body {
 	/* background: #fef5be; /* Old browsers */
 }
 
+/*
+	image replacement based on improved nash method here:
+	http://nicolasgallagher.com/css-image-replacement-with-pseudo-elements/
+*/
+.nir {
+	margin-top:0;
+	margin-left:0;
+	padding:0;
+	overflow:hidden;
+}
+.nir:before {
+	display:inline-block;
+	font-size:0;
+	line-height:0;
+}
+html.lt-ie8 .nir {
+	margin:0;
+	text-indent:-9000px;
+}
+
 #bkgA {
 	position: absolute;
 	z-index:20;
@@ -53,7 +73,9 @@ html.lt-ie9 #bkgB {
 
 header {
 	position:relative;
-	margin:0 auto;
+	margin-top:15px;
+	margin-left:auto;
+	margin-right:auto;
 	width:1000px;
 	z-index:100;
 }

@@ -35,22 +35,10 @@ nav[role="services"] h2 {
 	width:500px;
 	height:235px;
 }
-nav[role="services"] h2 a {
-	position:relative;
-	display:block;
-	text-align:center;
-	font-family: cursive, sans-serif;
-	font-size:70px;
-	text-transform:lowercase;
-	text-decoration:none;
-}
-nav[role="services"] h2 span {
+section[role="main"] h2 span {
 	position:absolute;
 	pointer-events:none;
 	text-align:center;
-	font-family: Georgia, Times, "Times New Roman", serif;
-	font-style: italic;
-	font-size:0.3em;
 	top:132px;
 	left:51px;
 }

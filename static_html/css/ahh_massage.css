@@ -1,0 +1,42 @@
+div.bkgBnr {
+	position:absolute;
+	display:block;
+	z-index:60;
+	top:110px;
+	width:100%;
+	min-width:974px;
+	height:461px;
+	background-image:url('../img/bkgbnr_massage.jpg');
+	background-position:center top;
+	background-repeat:no-repeat;
+}
+
+section[role="main"] h2 {
+  width:25em;
+  height:461px;
+}
+section[role="main"] h2 a {
+  color:#784242;
+  top:50px;
+  left:110px;
+}
+
+section[role="main"] h2 span {
+  color:#f07037;
+	font-family: sans-serif;
+	font-style:normal;
+}
+/*
+	image replacement based on improved nash method here:
+	http://nicolasgallagher.com/css-image-replacement-with-pseudo-elements/
+*/
+section[role="main"] h2 a.nir {
+   height:151px; /* height of replacement image */
+   width:322px; /* width of replacement image */
+}
+section[role="main"] h2 a.nir:before {
+	content:url(../img/btn_massage_home.png);
+}
+html.lt-ie8 section[role="main"] h2 a.nir {
+   background:url(../img/btn_massage_home.png) no-repeat 0 0;
+}
